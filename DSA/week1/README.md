@@ -12,7 +12,7 @@ Linked Lists
 HashMaps
 Binary Search Trees
 
-Algorithms
+### Algorithms
 Binary Search
 Bubble Sort
 Merge Sort
@@ -20,10 +20,11 @@ Recursion
 Depth First Search
 Breadth First Search
 
-
+### Structure 
 
 This repo is laid out in the following way:
 
+```
 src/
     main/
         java/
@@ -32,7 +33,6 @@ src/
                     data-structures-and-algorithms/
                         <code for labs>
                     answers/
-                        dont-look-here-before-trying-first/
                         <code for answers>
     test/
         java/
@@ -40,3 +40,7 @@ src/
                 example/
                     data-structures-and-algorithms/
                         <code for tests>
+```
+
+### Running Tests
+When you're ready to do the labs, swap the import in any test file from `org.example.answers.X` to `org.example.dsa.X`
