@@ -24,5 +24,14 @@ public class BinarySearch {
     }
 
     /** Recursive binary search. Returns index of target, or -1 if not found. */
+    public int searchRecursive(int[] arr, int target, int lo, int hi) {
+        // Base case: empty search space.
+        if (lo > hi) return -1;
+
+        int mid = lo + (hi - lo) / 2;
+        if (arr[mid] == target) return mid;
+        if (arr[mid] < target) return searchRecursive(arr, target, mid + 1, hi);
+        return searchRecursive(arr, target, lo, mid - 1);
+    }
 
 }

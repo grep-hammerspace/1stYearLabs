@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BinarySearchTreeTest {
 
-    private org.example.answers.BinarySearchTree<Integer> bst;
+    private org.example.dsa.BinarySearchTree<Integer> bst;
 
     @BeforeEach
     void setUp() {
-        bst = new org.example.answers.BinarySearchTree<>();
+        bst = new org.example.dsa.BinarySearchTree<>();
     }
 
     // Helper: build the reference tree [4,2,6,1,3,5,7]

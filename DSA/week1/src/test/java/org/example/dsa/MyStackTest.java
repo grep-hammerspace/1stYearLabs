@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyStackTest {
 
-    private org.example.answers.MyStack<Integer> stack;
+    private org.example.dsa.MyStack<Integer> stack;
 
     @BeforeEach
     void setUp() {
-        stack = new org.example.answers.MyStack<>();
+        stack = new org.example.dsa.MyStack<>();
     }
 
     @Test
