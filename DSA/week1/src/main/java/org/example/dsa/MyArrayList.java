@@ -1,8 +1,14 @@
 package org.example.dsa;
 
-public class MyArray<T> {
+public class MyArrayList<T> {
+    // Hint
+    // Java does not allow creating a generic array (new T[capacity]) due to type
+    // erasure, so we store Object[] and cast on retrieval instead.
+    private Object[] data;
+    private final double growthFactor = 1.5;
+    private final int defaultSize = 10;
 
-    public MyArray(int capacity) {
+    public MyArrayList(int capacity) {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 

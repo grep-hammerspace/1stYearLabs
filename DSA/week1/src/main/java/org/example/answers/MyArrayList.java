@@ -1,13 +1,15 @@
 package org.example.answers;
 
-public class MyArray<T> {
+public class MyArrayList<T> {
 
     // Java does not allow creating a generic array (new T[capacity]) due to type
     // erasure, so we store Object[] and cast on retrieval instead.
     private final Object[] data;
+    private final double growthFactor =1.5;
+    private final int defaultSize = 10;
 
-    public MyArray(int capacity) {
-        this.data = new Object[capacity];
+    public MyArrayList() {
+        this.data = new Object[10];
     }
 
     public int length() {

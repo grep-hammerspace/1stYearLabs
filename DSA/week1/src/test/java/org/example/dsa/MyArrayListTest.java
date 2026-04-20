@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MyArrayTest {
+class MyArrayListTest {
 
-    private org.example.answers.MyArray<Integer> arr;
+    private org.example.answers.MyArrayList<Integer> arr;
 
     @BeforeEach
     void setUp() {
-        arr = new org.example.answers.MyArray<>(5);
+        arr = new org.example.answers.MyArrayList<>();
         arr.set(0, 10);
         arr.set(1, 20);
         arr.set(2, 30);
