@@ -13,7 +13,7 @@ class MyStackTest {
 
     @BeforeEach
     void setUp() {
-        stack = new MyStack<>();
+        stack = new org.example.dsa.week1.MyStack<>();
     }
 
     @Test

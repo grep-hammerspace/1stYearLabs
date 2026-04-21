@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyQueueTest {
 
-    private MyQueue<Integer> queue;
+    private org.example.dsa.week1.MyQueue<Integer> queue;
 
     @BeforeEach
     void setUp() {
-        queue = new MyQueue<>();
+        queue = new org.example.dsa.week1.MyQueue<>();
     }
 
     @Test

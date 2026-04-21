@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyLinkedListTest {
 
-    private MyLinkedList<Integer> list;
+    private org.example.dsa.week1.MyLinkedList<Integer> list;
 
     @BeforeEach
     void setUp() {
-        list = new MyLinkedList<>();
+        list = new org.example.dsa.week1.MyLinkedList<>();
     }
 
     @Test

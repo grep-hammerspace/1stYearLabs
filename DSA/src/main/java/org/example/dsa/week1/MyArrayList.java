@@ -8,7 +8,7 @@ public class MyArrayList<T> {
     private final double growthFactor = 2;
     private final int defaultSize = 5;
 
-    public MyArrayList(int capacity) {
+    public MyArrayList() {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 

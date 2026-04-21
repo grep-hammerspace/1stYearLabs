@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BubbleSortTest {
 
-    private BubbleSort sorter;
+    private org.example.dsa.week1.BubbleSort sorter;
 
     @BeforeEach
     void setUp() {
-        sorter = new BubbleSort();
+        sorter = new org.example.dsa.week1.BubbleSort();
     }
 
     @Test

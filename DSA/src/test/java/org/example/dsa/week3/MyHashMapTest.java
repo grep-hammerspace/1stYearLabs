@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyHashMapTest {
 
-    private MyHashMap<String, Integer> map;
+    private org.example.dsa.week3.MyHashMap<String, Integer> map;
 
     @BeforeEach
     void setUp() {
-        map = new MyHashMap<>();
+        map = new org.example.dsa.week3.MyHashMap<>();
     }
 
     @Test

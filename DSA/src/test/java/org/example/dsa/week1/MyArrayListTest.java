@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
 
-    private MyArrayList<Integer> arr;
+    private org.example.dsa.week1.MyArrayList<Integer> arr;
 
     @BeforeEach
     void setUp() {
-        arr = new MyArrayList<>();
+        arr = new org.example.dsa.week1.MyArrayList<>();
         arr.set(0, 10);
         arr.set(1, 20);
         arr.set(2, 30);

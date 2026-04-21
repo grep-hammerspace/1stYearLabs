@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MergeSortTest {
 
-    private MergeSort sorter;
+    private org.example.dsa.week2.MergeSort sorter;
 
     @BeforeEach
     void setUp() {
-        sorter = new MergeSort();
+        sorter = new org.example.dsa.week2.MergeSort();
     }
 
     @Test

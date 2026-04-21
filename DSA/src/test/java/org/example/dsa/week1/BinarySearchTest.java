@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BinarySearchTest {
 
-    private BinarySearch bs;
+    private org.example.dsa.week1.BinarySearch bs;
     private final int[] arr = {1, 3, 5, 7, 9, 11, 13, 15};
 
     @BeforeEach
     void setUp() {
-        bs = new BinarySearch();
+        bs = new org.example.dsa.week1.BinarySearch();
     }
 
     @Test
