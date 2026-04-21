@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BFSTest {
 
-    private org.example.answers.BreadthFirstSearch bfs;
+    private org.example.dsa.BreadthFirstSearch bfs;
 
     // Level-structured graph from node 0:
     //   Level 0: 0
@@ -41,7 +41,7 @@ class BFSTest {
 
     @BeforeEach
     void setUp() {
-        bfs = new org.example.answers.BreadthFirstSearch();
+        bfs = new org.example.dsa.BreadthFirstSearch();
     }
 
     @Test

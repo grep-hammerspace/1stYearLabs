@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DFSTest {
 
-    private org.example.answers.DepthFirstSearch dfs;
+    private org.example.dsa.DepthFirstSearch dfs;
 
     // Connected graph: 0-1, 0-2, 1-3, 2-3
     private final Map<Integer, List<Integer>> connected = Map.of(
@@ -37,7 +37,7 @@ class DFSTest {
 
     @BeforeEach
     void setUp() {
-        dfs = new org.example.answers.DepthFirstSearch();
+        dfs = new org.example.dsa.DepthFirstSearch();
     }
 
     @Test

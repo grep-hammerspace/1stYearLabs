@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RecursionTest {
 
-    private org.example.dsa .Recursion r;
+    private org.example.dsa.Recursion r;
 
     @BeforeEach
     void setUp() {
