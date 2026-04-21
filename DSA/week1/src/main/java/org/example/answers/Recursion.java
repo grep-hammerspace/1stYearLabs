@@ -28,13 +28,6 @@ public class Recursion {
         return n % 10 + sumOfDigits(n / 10);
     }
 
-    // Builds the reversed string on the way back up the call stack:
-    // recurse on everything after the first character, then append the first character.
-    public String reverseString(String s) {
-        if (s == null || s.length() <= 1) return s; // Base case: nothing to reverse.
-        return reverseString(s.substring(1)) + s.charAt(0);
-    }
-
     // base^exp = base * base^(exp-1); each call reduces exp by 1 until it hits 0.
     // Cast to long before multiplying to avoid overflow for large results.
     public long power(int base, int exp) {

@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RecursionTest {
 
-    private org.example.answers.Recursion r;
+    private org.example.dsa .Recursion r;
 
     @BeforeEach
     void setUp() {
-        r = new org.example.answers.Recursion();
+        r = new org.example.dsa.Recursion();
     }
 
     @Test
@@ -60,16 +60,6 @@ class RecursionTest {
         assertEquals(1, r.sumOfDigits(1000));
     }
 
-    @Test
-    void reverseString() {
-        assertEquals("cba", r.reverseString("abc"));
-        assertEquals("racecar", r.reverseString("racecar"));
-    }
-
-    @Test
-    void reverseEmptyString() {
-        assertEquals("", r.reverseString(""));
-    }
 
     @Test
     void powerPositiveExp() {
