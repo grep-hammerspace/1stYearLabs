@@ -3,6 +3,8 @@ package org.example.dsa;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
@@ -63,7 +65,9 @@ class MyArrayListTest {
     }
 
     @Test
-    void lengthMatchesCapacity() {
-        assertEquals(5, arr.length());
+    void setWithABigIndexGrowsTheArray(){
+        arr.set(5,87);
+        assertEquals(arr.length(),10);
+        assertThrows(NoSuchElementException.class, () -> arr.get(6));
     }
 }
