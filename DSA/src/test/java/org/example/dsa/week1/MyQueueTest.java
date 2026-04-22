@@ -42,9 +42,10 @@ class MyQueueTest {
     @Test
     void peekDoesNotRemove() {
         queue.enqueue(10);
+        queue.enqueue(33);
         assertEquals(10, queue.peek());
         assertEquals(10, queue.peek());
-        assertEquals(1, queue.size());
+        assertEquals(2, queue.size());
     }
 
     @Test
