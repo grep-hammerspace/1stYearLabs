@@ -13,27 +13,19 @@ public class MyStack<T> {
 
     /** @throws EmptyStackException if the stack is empty */
     public T pop() {
-        if (elements.isEmpty()) {
-            throw new EmptyStackException();
-        }
-        T tailElement = elements.get(elements.size()-1);
-        elements.remove(elements.size()-1);
-        return tailElement;
+        throw new UnsupportedOperationException();
     }
 
     /** @throws EmptyStackException if the stack is empty */
     public T peek() {
-        if (elements.isEmpty()){
-            throw new EmptyStackException();
-        }
-        return elements.get(elements.size()-1);
+        throw new UnsupportedOperationException();
     }
 
     public boolean isEmpty() {
-        return elements.isEmpty();
+        throw new UnsupportedOperationException();
     }
 
     public int size() {
-        return  elements.size();
+        throw new UnsupportedOperationException();
     }
 }

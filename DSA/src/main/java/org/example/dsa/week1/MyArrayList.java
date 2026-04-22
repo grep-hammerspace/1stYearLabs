@@ -1,8 +1,7 @@
 package org.example.dsa.week1;
 
 public class MyArrayList<T> {
-    // Hint
-    // Java does not allow creating a generic array (new T[capacity]) due to type
+    // Hint: Java does not allow creating a generic array (new T[capacity]) due to type
     // erasure, so we store Object[] and cast on retrieval instead.
     private Object[] data;
     private final double growthFactor = 2;

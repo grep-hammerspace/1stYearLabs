@@ -16,101 +16,33 @@ public class MyLinkedList<T> {
     private int size;
 
     public void addFirst(T data) {
-        if (this.head == null) {
-            // The linked list was totally empty
-            Node<T> node = new Node<>(data);
-            this.head = node;
-            this.tail = head;
-            size++;
-            return;
-        }
-        // There was a pre-existing head node.
-        Node<T> newHeadNode = new Node<>(data);
-
-        // Set current head as next of new head node
-        newHeadNode.next = this.head;
-
-        // Set the objects head to the new one
-        this.head = newHeadNode;
-        size++;
+        throw new UnsupportedOperationException();
     }
 
     public void addLast(T data) {
-        // The linked list was empty
-        if (this.tail == null) {
-            // The linked list was totally empty
-            Node<T> node = new Node<>(data);
-            this.head = this.tail =  node;
-            size++;
-            return;
-        }
-
-        // Theres an existing tail node
-        Node<T> newTailNode = new Node<>(data);
-        this.tail.next = newTailNode;
-        this.tail = newTailNode;
-        size++;
+        throw new UnsupportedOperationException();
     }
 
     /** @throws NoSuchElementException if the list is empty */
     public T removeFirst() {
-        if (this.head == null) throw new NoSuchElementException();
-
-        // Get data from existing head
-        T data = this.head.data;
-
-        // The classes head node is now what the element that the previous node points to
-        this.head = this.head.next;
-
-        // The head node was the only node
-        if (this.head == null) this.tail = null;
-
-        size--;
-        return data;
+        throw new UnsupportedOperationException();
     }
 
     /** @throws NoSuchElementException if the list is empty */
     public T removeLast() {
-        if (tail == null) throw new NoSuchElementException();
-
-        // Only one node
-        if (this.head == this.tail){
-            T data = this.head.data;
-            this.head = null;
-            this.tail = null;
-            size --;
-            return data;
-        }
-
-        //More than on node, walk down to it and set next == null
-        Node<T> currentNode = head;
-
-        while(currentNode.next != this.tail){
-            currentNode = currentNode.next;
-        }
-        // Get data from last node
-        T data = currentNode.next.data;
-        this.tail = currentNode;
-
-        // Mark last node as null
-        currentNode.next = null;
-
-        size--;
-        return data;
+        throw new UnsupportedOperationException();
     }
 
     // Throw NoSuchElementException if empty
     // Allows you to get data from the head node without removing anything from the linkedList
     public T peekFirst(){
-        if (this.head == null) throw new NoSuchElementException();
-        return this.head.data;
+        throw new UnsupportedOperationException();
     }
 
     // Throw NoSuchElementException if empty
     // Allows you to get data from the tail node without removing anything from the linkedList
     public T peekLast() {
-        if (this.tail == null) throw new NoSuchElementException();
-        return this.tail.data;
+        throw new UnsupportedOperationException();
     }
 
     /** @throws IndexOutOfBoundsException if index is out of range */
