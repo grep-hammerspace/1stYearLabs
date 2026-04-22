@@ -16,7 +16,6 @@ class MyLinkedListTest {
         list = new org.example.dsa.week1.MyLinkedList<>();
     }
 
-
     @Test
     void addFirstPrepends() {
         list.addFirst(1);
