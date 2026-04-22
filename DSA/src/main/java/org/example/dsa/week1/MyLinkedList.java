@@ -99,6 +99,20 @@ public class MyLinkedList<T> {
         return data;
     }
 
+    // Throw NoSuchElementException if empty
+    // Allows you to get data from the head node without removing anything from the linkedList
+    public T peekFirst(){
+        if (this.head == null) throw new NoSuchElementException();
+        return this.head.data;
+    }
+
+    // Throw NoSuchElementException if empty
+    // Allows you to get data from the tail node without removing anything from the linkedList
+    public T peekLast() {
+        if (this.tail == null) throw new NoSuchElementException();
+        return this.tail.data;
+    }
+
     /** @throws IndexOutOfBoundsException if index is out of range */
     public T get(int index) {
         if (index < 0 || index >= this.size) throw new IndexOutOfBoundsException();

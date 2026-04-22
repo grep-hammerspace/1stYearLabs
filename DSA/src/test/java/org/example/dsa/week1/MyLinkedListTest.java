@@ -109,4 +109,20 @@ class MyLinkedListTest {
         list.removeFirst();
         assertEquals(2, list.size());
     }
+
+    @Test
+    void testPeekFirstDoesNotRemove(){
+        list.addFirst(1);
+        list.addFirst(2);
+        assertEquals(2, list.peekFirst());
+        assertEquals(2, list.peekFirst());
+    }
+
+    @Test
+    void testPeekLastDoesNotRemove(){
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(2, list.peekLast());
+        assertEquals(2, list.peekLast());
+    }
 }
