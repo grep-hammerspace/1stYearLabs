@@ -19,7 +19,9 @@ public class MyLinkedList<T> {
         if (this.head == null) {
             // The linked list was totally empty
             Node<T> node = new Node<>(data);
-            head = node;
+            this.head = node;
+            this.tail = head;
+            size++;
             return;
         }
         // There was a pre-existing head node.
@@ -30,16 +32,20 @@ public class MyLinkedList<T> {
 
         // Set the objects head to the new one
         this.head = newHeadNode;
-
-        // There is no existing tail node, so the head is also the tail
-        if (tail == null) {
-            this.tail = head;
-        }
-
         size++;
     }
 
     public void addLast(T data) {
+        // The linked list was empty
+        if (this.tail == null) {
+            // The linked list was totally empty
+            Node<T> node = new Node<>(data);
+            this.head = this.tail =  node;
+            size++;
+            return;
+        }
+
+        // Theres an existing tail node
         Node<T> newTailNode = new Node<>(data);
         this.tail.next = newTailNode;
         size++;
