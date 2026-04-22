@@ -48,6 +48,7 @@ public class MyLinkedList<T> {
         // Theres an existing tail node
         Node<T> newTailNode = new Node<>(data);
         this.tail.next = newTailNode;
+        this.tail = newTailNode;
         size++;
     }
 
@@ -125,6 +126,6 @@ public class MyLinkedList<T> {
     }
 
     public boolean isEmpty() {
-        return this.size > 0;
+        return this.size == 0;
     }
 }

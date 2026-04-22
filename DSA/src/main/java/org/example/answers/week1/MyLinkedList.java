@@ -34,7 +34,7 @@ public class MyLinkedList<T> {
             head = tail = node;
         } else {
             tail.next = node;
-            tail = node;
+            this.tail = node;
         }
         size++;
     }
