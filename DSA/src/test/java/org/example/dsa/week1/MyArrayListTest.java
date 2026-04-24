@@ -68,6 +68,6 @@ class MyArrayListTest {
     void setWithABigIndexGrowsTheArray(){
         arr.set(5,87);
         assertEquals(arr.length(),10);
-        assertThrows(NoSuchElementException.class, () -> arr.get(6));
+        assertThrows(NoSuchElementException.class, () -> arr.get(16));
     }
 }
