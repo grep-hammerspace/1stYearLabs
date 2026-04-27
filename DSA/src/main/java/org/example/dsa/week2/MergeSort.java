@@ -6,23 +6,33 @@ public class MergeSort {
 
     /** Sorts arr in ascending order in-place. */
     public void sort(int[] arr) {
-        int lo = arr.length;
-        int hi = 0;
-
-        if (lo == hi){
+        if (arr.length <=1){
             //List is one element long
             return;
         }
 
-        int mid = lo + (hi-lo/2);
+        int mid = (arr.length/2);
         int[] left  = new int[mid];
-        int[]right = new int[hi-mid];
-        System.arraycopy(arr,0,left,0,mid);
-        System.arraycopy(arr,mid,right,0,hi-mid);
+        int[]right = new int[arr.length-mid];
+
+        // Copy data into left and right arrays
+        for (int i = 0;i < left.length;i++){
+            left[i] = arr[i];
+        }
+
+        for (int i = 0; i < right.length; i++) {
+            right[i] = arr[mid + i];
+        }
+
+        //Sort each half
         sort(left);
         sort(right);
+
+        // Merge the two sorted halves back into the original array
         int[] merged = merge(left, right);
-        System.arraycopy(merged, 0, arr, 0, arr.length);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = merged[i];
+        }
     }
 
     /** Merges two sorted arrays into a new sorted array. */
@@ -33,15 +43,14 @@ public class MergeSort {
 
         while (i < left.length && j < right.length){
             // We will exit when we reach the last element in the shorter array.
-            if (left[i] < right[i]){
+            if (left[i] < right[j]){
                 mergeResult[k] = left[i];
                 i +=1;
-                k +=1;
             }else {
                 mergeResult[k] = right[j];
                 j +=1;
-                k += 1;
             }
+            k +=1;
         }
 
         // Copy over leftover elements directly as everything else is already sorted.

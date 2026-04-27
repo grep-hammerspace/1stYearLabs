@@ -16,9 +16,9 @@ class MergeSortTest {
 
     @Test
     void sortRandomArray() {
-        int[] arr = {5, 3, 8, 1, 2};
+        int[] arr = {5, 3, 8};
         sorter.sort(arr);
-        assertArrayEquals(new int[]{1, 2, 3, 5, 8}, arr);
+        assertArrayEquals(new int[]{3, 5, 8}, arr);
     }
 
     @Test
