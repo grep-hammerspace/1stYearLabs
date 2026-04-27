@@ -2,52 +2,101 @@ package org.example.dsa.week2;
 
 import java.util.List;
 
-public class BinarySearchTree<T extends Comparable<T>> {
+public class BinarySearchTree {
 
-    // T must implement Comparable so we can decide left/right placement without
-    // needing a separate Comparator parameter.
-    private static class Node<T> {
-        T value;
-        Node<T> left, right;
-        Node(T value) { this.value = value; }
+    private static class Node {
+        int value;
+        Node left;
+        Node right;
+
+        Node(int value) {
+            this.value = value;
+        }
     }
 
-    // The first node in ant BST is called the root.
-    private Node<T> root;
+    // The first node in a BST is called the root.
+    private Node root;
 
-    public void insert(T value) {
-        throw new UnsupportedOperationException("Not implemented yet");
+    public void insert(int value) {
+        root = insertHelper(root, value);
     }
 
-    public boolean search(T value) {
-        throw new UnsupportedOperationException("Not implemented yet");
+    private Node insertHelper(Node currentNode, int value){
+        // Base case, we have reached an empty spot in the tree
+        if (currentNode == null) {
+            return new Node(value);
+        }
+
+        if (value < currentNode.value){
+            currentNode.left = insertHelper(currentNode.left, value);
+        } else if ( value > currentNode.value) {
+            currentNode.right = insertHelper(currentNode.right, value);
+        }
+
+        // if value equals an existing node, do nothing.
+            return currentNode;
+
     }
 
-    public void delete(T value) {
+    public boolean search(int value) {
+
+        Node currentNode = root;
+
+        while(currentNode != null) {
+            if (value < currentNode.value){
+                currentNode = currentNode.left;
+            } else if ( value > currentNode.value) {
+                currentNode = currentNode.right;
+            } else {
+                // value is equal to value we are seaching for
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void delete(int value) {
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
     /** Left → root → right. Result is always sorted ascending for a valid BST. */
-    public List<T> inOrder() {
+    public List<Integer> inOrder() {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
-    /** Root → left → right. Preserves tree structure; useful for serialisation. */
-    public List<T> preOrder() {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
-
-    /** Left → right → root. Children processed before parent; useful for deletion. */
-    public List<T> postOrder() {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
 
     /** Returns 0 for an empty tree, 1 for a single node. */
-    public int height() {
-        throw new UnsupportedOperationException("Not implemented yet");
+    public int height() { return  heightHelper(root);
+
+    }
+
+    private int heightHelper(Node currentNode){
+        if (currentNode == null){
+            return 0;
+        }
+
+        // Height of a tree = 1 + height of tallest subtree, we can do that recursively.
+        int leftHeight = heightHelper(currentNode.left);
+        int rightHeight = heightHelper(currentNode.right);
+
+        return 1 + Math.max(leftHeight,rightHeight);
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return root == null;
     }
+
+    // Optional extensions other kinds of tree traversal
+//    /** Root → left → right. Preserves tree structure; useful for serialisation. */
+//    public List<Integer> preOrder() {
+//        throw new UnsupportedOperationException("Not implemented yet");
+//    }
+//
+//    /** Left → right → root. Children processed before parent; useful for deletion. */
+//    public List<Integer> postOrder() {
+//        throw new UnsupportedOperationException("Not implemented yet");
+//    }
+
 }

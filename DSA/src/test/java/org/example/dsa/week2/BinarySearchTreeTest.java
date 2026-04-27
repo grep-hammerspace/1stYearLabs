@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BinarySearchTreeTest {
 
-    private org.example.dsa.week2.BinarySearchTree<Integer> bst;
+    private org.example.dsa.week2.BinarySearchTree bst;
 
     @BeforeEach
     void setUp() {
-        bst = new org.example.dsa.week2.BinarySearchTree<>();
+        bst = new org.example.dsa.week2.BinarySearchTree();
     }
 
     // Helper: build the reference tree [4,2,6,1,3,5,7]
@@ -50,18 +50,6 @@ class BinarySearchTreeTest {
     void inOrderIsSorted() {
         buildTree();
         assertEquals(List.of(1, 2, 3, 4, 5, 6, 7), bst.inOrder());
-    }
-
-    @Test
-    void preOrder() {
-        buildTree();
-        assertEquals(List.of(4, 2, 1, 3, 6, 5, 7), bst.preOrder());
-    }
-
-    @Test
-    void postOrder() {
-        buildTree();
-        assertEquals(List.of(1, 3, 2, 5, 7, 6, 4), bst.postOrder());
     }
 
     @Test
@@ -120,4 +108,17 @@ class BinarySearchTreeTest {
         assertTrue(bst.search(2));
         assertTrue(bst.search(6));
     }
+
+    //Optional extension tests - other kinds of tree traversal;
+//    @Test
+//    void preOrder() {
+//        buildTree();
+//        assertEquals(List.of(4, 2, 1, 3, 6, 5, 7), bst.preOrder());
+//    }
+//
+//    @Test
+//    void postOrder() {
+//        buildTree();
+//        assertEquals(List.of(1, 3, 2, 5, 7, 6, 4), bst.postOrder());
+//    }
 }
