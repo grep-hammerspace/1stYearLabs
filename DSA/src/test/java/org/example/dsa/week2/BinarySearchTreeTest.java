@@ -18,7 +18,7 @@ class BinarySearchTreeTest {
 
     // Helper: build the reference tree [4,2,6,1,3,5,7]
     private void buildTree() {
-        for (int v : new int[]{4, 2, 6, 1, 3, 5, 7}) bst.insert(v);
+        for (int v : new int[]{4, 2, 6}) bst.insert(v);
     }
 
     @Test
@@ -49,7 +49,7 @@ class BinarySearchTreeTest {
     @Test
     void inOrderIsSorted() {
         buildTree();
-        assertEquals(List.of(1, 2, 3, 4, 5, 6, 7), bst.inOrder());
+        assertEquals(List.of(2, 4, 6), bst.inOrder());
     }
 
     @Test

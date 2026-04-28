@@ -1,5 +1,6 @@
 package org.example.dsa.week2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinarySearchTree {
@@ -63,7 +64,23 @@ public class BinarySearchTree {
 
     /** Left → root → right. Result is always sorted ascending for a valid BST. */
     public List<Integer> inOrder() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        List<Integer> result = new ArrayList<>();
+
+        inOrderTraverseHelper(root, result);
+        return result;
+    }
+
+    private void inOrderTraverseHelper(Node currentNode, List<Integer> result){
+        // We want to get an ordered list of nodes froma Binary Search Tree.
+        // We do this by visiting each sub tree, left, root right.
+
+        if (currentNode == null ){
+            return;
+        }
+
+        inOrderTraverseHelper(currentNode.left, result);
+        result.add(currentNode.value);
+        inOrderTraverseHelper(currentNode.right, result);
     }
 
 
@@ -77,7 +94,7 @@ public class BinarySearchTree {
             return 0;
         }
 
-        // Height of a tree = 1 + height of tallest subtree, we can do that recursively.
+        // Height of a tree = 1 (root) + height of tallest subtree, we can do that recursively.
         int leftHeight = heightHelper(currentNode.left);
         int rightHeight = heightHelper(currentNode.right);
 
