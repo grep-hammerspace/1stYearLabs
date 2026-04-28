@@ -58,7 +58,52 @@ public class BinarySearchTree {
     }
 
     public void delete(int value) {
+        root = deleteHelper(root, value);
         // Three cases 1) Deleting the root node, 2) deleting a leaf node (no children) and 3) Deleting
+    }
+
+    private Node deleteHelper(Node currentNode, int value){
+        // Base case, ie there was no root or node with matching value wasnt found;
+        if(currentNode == null) return null;
+
+        // Navigate to the Node we are trying to delete
+        if (value < currentNode.value){
+            // look in left sub-tree
+            currentNode.left = deleteHelper(currentNode.left,value);
+        } else if (value > currentNode.value){
+            // look in right sub tree
+            currentNode.right = deleteHelper(currentNode.right,value);
+        } else {
+            // Node value == target and ew have arrived at what we want to delete
+
+            // no left child, replace current node with right child
+            if(currentNode.left == null){
+                return currentNode.right;
+            }
+
+            //no right child, replace curent node with left child
+            if (currentNode.right == null){
+                return currentNode.left;
+            }
+
+            // currentNode has two children,
+            // we need to replace it with the right child (successor) and add the left child
+            // to the replaced node
+
+            Node successor = currentNode.right;
+
+            // iterate all the way down the left sub-tree of the successor
+            while (successor.left != null){
+                successor = successor.left;
+            }
+
+            // reassign
+            currentNode.value = successor.value;
+            currentNode.right = deleteHelper(currentNode.right, successor.value);
+
+        }
+
+        return currentNode;
     }
 
     /** Left → root → right. Result is always sorted ascending for a valid BST. */
