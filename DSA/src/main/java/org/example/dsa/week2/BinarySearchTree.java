@@ -58,8 +58,7 @@ public class BinarySearchTree {
     }
 
     public void delete(int value) {
-
-        throw new UnsupportedOperationException("Not implemented yet");
+        // Three cases 1) Deleting the root node, 2) deleting a leaf node (no children) and 3) Deleting
     }
 
     /** Left → root → right. Result is always sorted ascending for a valid BST. */
