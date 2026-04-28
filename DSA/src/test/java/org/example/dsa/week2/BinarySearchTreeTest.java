@@ -125,17 +125,4 @@ class BinarySearchTreeTest {
         buildTree();
         assertEquals(List.of(4, 2, 6, 1, 3, 5, 7), bst.levelOrder());
     }
-
-    //Optional extension tests - other kinds of tree traversal;
-//    @Test
-//    void preOrder() {
-//        buildTree();
-//        assertEquals(List.of(4, 2, 1, 3, 6, 5, 7), bst.preOrder());
-//    }
-//
-//    @Test
-//    void postOrder() {
-//        buildTree();
-//        assertEquals(List.of(1, 3, 2, 5, 7, 6, 4), bst.postOrder());
-//    }
 }

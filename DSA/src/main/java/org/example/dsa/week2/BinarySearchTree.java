@@ -154,15 +154,4 @@ public class BinarySearchTree {
         return root == null;
     }
 
-    // Optional extensions other kinds of tree traversal
-//    /** Root → left → right. Preserves tree structure; useful for serialisation. */
-//    public List<Integer> preOrder() {
-//        throw new UnsupportedOperationException("Not implemented yet");
-//    }
-//
-//    /** Left → right → root. Children processed before parent; useful for deletion. */
-//    public List<Integer> postOrder() {
-//        throw new UnsupportedOperationException("Not implemented yet");
-//    }
-
 }
