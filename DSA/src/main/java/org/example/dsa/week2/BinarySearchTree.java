@@ -128,6 +128,11 @@ public class BinarySearchTree {
     }
 
 
+    /** Visits every node level by level, left to right. */
+    public List<Integer> levelOrder() {
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+
     /** Returns 0 for an empty tree, 1 for a single node. */
     public int height() { return  heightHelper(root);
 

@@ -109,6 +109,23 @@ class BinarySearchTreeTest {
         assertTrue(bst.search(6));
     }
 
+    @Test
+    void levelOrderEmptyTree() {
+        assertEquals(List.of(), bst.levelOrder());
+    }
+
+    @Test
+    void levelOrderSingleNode() {
+        bst.insert(10);
+        assertEquals(List.of(10), bst.levelOrder());
+    }
+
+    @Test
+    void levelOrderBalancedTree() {
+        buildTree();
+        assertEquals(List.of(4, 2, 6, 1, 3, 5, 7), bst.levelOrder());
+    }
+
     //Optional extension tests - other kinds of tree traversal;
 //    @Test
 //    void preOrder() {

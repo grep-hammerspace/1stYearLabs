@@ -1,7 +1,9 @@
 package org.example.answers.week2;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /*
  * A Binary Search Tree (BST) is a tree where every node follows one rule:
@@ -199,6 +201,31 @@ public class BinarySearchTree {
         postOrderRec(node.left, result);
         postOrderRec(node.right, result);
         result.add(node.value);
+    }
+
+    /*
+     * LEVEL-ORDER TRAVERSAL (Breadth-First Search)
+     *
+     * Visits every node level by level, left to right.
+     * A queue drives the traversal: we enqueue the root, then for each node
+     * we dequeue, we record its value and enqueue its children (left then right).
+     * This guarantees we process all nodes at depth d before any node at depth d+1.
+     */
+    public List<Integer> levelOrder() {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) return result;
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            result.add(node.value);
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+        }
+
+        return result;
     }
 
     /*
