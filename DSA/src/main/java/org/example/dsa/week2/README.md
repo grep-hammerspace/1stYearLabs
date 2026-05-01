@@ -6,5 +6,3 @@ Doing them in this order will scaffold your knowledge and let you build on previ
 1) Recursion
 2) MergeSort, make sure the mergeTwoSortedArrays test is working before you try to implement sort, it will make it much easier!!
 3) BinarySearchTree, do insert(), search(), height(), inOrder(), delete()
-4) Breadth First Search
-5) Depth First Search
