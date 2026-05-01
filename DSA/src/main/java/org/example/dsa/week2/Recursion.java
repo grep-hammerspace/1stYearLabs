@@ -10,7 +10,7 @@ public class Recursion {
     /** Returns the nth Fibonacci number (fib(0)=0, fib(1)=1).
      *  @throws IllegalArgumentException if n < 0 */
     public int fibonacci(int n) {
-       throw  new UnsupportedOperationException()
+       throw  new UnsupportedOperationException();
 
     }
 
