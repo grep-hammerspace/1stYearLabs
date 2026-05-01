@@ -17,7 +17,7 @@ public class Recursion {
     /** Returns the sum of the digits of n.
      * ie sumOfDigits(123) => 1 + 2 + 3 = 6 */
     public int sumOfDigits(int n) {
-        throw new UnsupportedOperationException()
+        throw new UnsupportedOperationException();
     }
 
     /** Returns base raised to the power exp.
